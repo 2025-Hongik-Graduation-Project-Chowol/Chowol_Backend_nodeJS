@@ -5,7 +5,7 @@ import errorHandler from './src/handlers/errorHandler.js';
 
 dotenv.config();
 const app = express();
-const port = process.env.PORT || 8080;
+const port = process.env.PORT;
 
 
 app.get('/', (req, res) => {
@@ -31,4 +31,5 @@ app.use(errorHandler);
 app.listen(port, "0.0.0.0", () => {
     console.log(`서버가 ${port} 포트에서 실행 중!`);
 });
+
 export default app;
