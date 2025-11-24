@@ -28,8 +28,7 @@ app.use((req, res, next) => {
 
 app.use(errorHandler);
 
-app.listen(port, () => {
-    console.log(`서버가 http://localhost:${port} 에서 실행 중!`);
+app.listen(port, "0.0.0.0", () => {
+    console.log(`서버가 ${port} 포트에서 실행 중!`);
 });
-
 export default app;
